@@ -25,7 +25,7 @@ relationMapData.push(
       'node-7': ['node-17'],
       'node-8': ['node-18', 'node-20'],
       'node-9': ['node-14', 'node-17'],
-      'node-10': ['node-11', 'node-12'],
+      'node-10': ['node-11', 'node-12', 'node-20'],
       'node-11': ['node-13', 'node-15', 'node-16', 'node-19'],
     },
   },
