@@ -1,0 +1,78 @@
+.relation-map {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  text-align: center;
+  height: calc(100vh - 40px);
+  margin: 20px;
+}
+
+.map-list {
+  width: min(900px, 80%);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-around; */
+  align-content: flex-start;
+  gap: 4px 0;
+}
+
+.node-place {
+  width: min(45%, 300px);
+}
+
+.map-node {
+  border-style: solid;
+  width: max-content;
+  margin: auto;
+  padding: 3px 12px;
+  box-sizing: border-box;
+  max-width: 97%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+  transition: 300ms;
+}
+
+.lit, :not(.level0)>.node-place>.map-node:hover {
+  box-shadow: 0 0 3px 1px orangered, 0 0 3px 1px orangered inset;
+  text-shadow: 0 0 2px orangered;
+}
+
+.map-node::after {
+  content: '...';
+  padding-left: 5px;
+  box-sizing: border-box;
+  text-align: left;
+  width: min(34.4vw, calc(300px * 0.97));
+  height: 100%;
+  background: linear-gradient(to left,
+      transparent min(24vw, 210px),
+      white min(30vw, 270px));
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.level2 .map-node {
+  border-radius: 14px;
+  border-width: 1px;
+}
+
+.level1 .map-node {
+  border-radius: 17px;
+  border-width: 2px;
+}
+
+.level0 {
+  margin: 20px auto;
+}
+
+.level0 .map-node {
+  border-radius: 20px;
+  border-width: 3px;
+}
